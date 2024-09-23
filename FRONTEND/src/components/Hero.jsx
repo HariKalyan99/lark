@@ -13,10 +13,10 @@ const Hero = () => {
     >
       <div className="row py-lg-5">
         <div className="col-lg-6 col-md-8 mx-auto">
-          <h1 className="fw-bolder">LARK</h1>
-          <p className="lead text-body-secondary fw-bold">
+          <h1 className="fw-bolder" style={{fontSize: "5rem"}}>LARK</h1>
+          <h1 className="lead text-body-dark fw-bolder fs-1" style={{textShadow: "10px 20px 30px black"}}>
             Leadership and Adaptability in Resourceful Knowledge.
-          </p>
+          </h1>
           {/* <p>
           <a href="#" className="btn btn-primary my-2">Main call to action</a>
           <a href="#" className="btn btn-secondary my-2">Secondary action</a>

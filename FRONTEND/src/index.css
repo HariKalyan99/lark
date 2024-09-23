@@ -12,3 +12,26 @@
 html {
   background-color: var(--primary-green-color);
 }
+
+.logo_lark_img {
+  box-shadow: 1px 10px 40px black;
+  transition: 0.3s ease-in-out;
+}
+
+.logo_lark img:hover {
+  box-shadow: 1px 1px 19px 10px rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+@media (min-width: 200px) and (max-width: 540px) {
+  .logo_lark {
+    min-width: 200px;
+    min-height: 200px;
+    object-fit: cover;
+  }
+  
+  .logo_lark img {
+    height: 100%;
+    width: 100%;
+  }
+} 

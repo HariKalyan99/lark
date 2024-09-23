@@ -1,10 +1,13 @@
+import logo from '../../public/lark_logo.png'
 
 const Navigation = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-md sticky-top border-bottom" style={{"backgroundColor": "var(--primary-green-color)"}}>
   <div className="container">
-    
+  <a className="navbar-brand d-flex justify-content-start px-3" href="#aboutus">
+      <img src={logo} alt="logo" style={{height: "45px"}}/>
+    </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
