@@ -23,6 +23,8 @@ html {
   cursor: pointer;
 }
 
+
+
 @media (min-width: 200px) and (max-width: 540px) {
   .logo_lark {
     min-width: 200px;
