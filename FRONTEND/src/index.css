@@ -6,6 +6,7 @@
 
 :root {
   --primary-green-color: #01543e;
+  --primary-black-color: #000000;
   --primary-white-color: #ffffff;
 }
 
@@ -19,7 +20,7 @@ html {
 }
 
 .logo_lark img:hover {
-  box-shadow: 1px 1px 19px 10px rgb(255, 255, 255);
+  box-shadow: 1px 1px 19px 20px rgb(255, 255, 255);
   cursor: pointer;
 }
 
@@ -35,5 +36,10 @@ html {
   .logo_lark img {
     height: 100%;
     width: 100%;
+  }
+
+  .bg_main {
+    background: rgb(1,84,62) !important;
+  background: linear-gradient(38deg, rgba(255,255,255,1) 45%, rgba(1,84,62,1) 45%) !important;
   }
 } 

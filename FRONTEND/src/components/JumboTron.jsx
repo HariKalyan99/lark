@@ -1,9 +1,10 @@
 import React from 'react'
 import logo from '../../public/lark_logo.png'
+import Assylum from './Assylum'
 const JumboTron = () => {
   return (
     <section
-      className="py-5 text-center container-fluid"
+      className="py-5 text-center container-fluid bg_main"
       style={{
         background: "rgb(255,255,255)",
         background:
