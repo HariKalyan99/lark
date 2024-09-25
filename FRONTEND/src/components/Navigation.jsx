@@ -1,4 +1,4 @@
-import logo from '../../public/lark_logo.png'
+import logo from '/lark_logo.png'
 
 const Navigation = () => {
   return (

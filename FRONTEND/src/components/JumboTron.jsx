@@ -1,7 +1,7 @@
 import React from 'react'
-import logo from '../../public/lark_logo.png'
-import clogo from '../../public/company.png'
-import ulogo from '../../public/user.png'
+import logo from '/lark_logo.png'
+import clogo from '/company.png'
+import ulogo from '/user.png'
 
 const JumboTron = ({nav, noBg}) => {
   if(noBg){
