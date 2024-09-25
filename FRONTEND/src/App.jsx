@@ -1,15 +1,19 @@
-import Assylum from "./components/Assylum"
-import Hero from "./components/Hero"
-import JumboTron from "./components/JumboTron"
-import Navigation from "./components/Navigation"
+import { useState } from "react"
+import LandingPage from "./components/pages/LandingPage"
+import MainPage from "./components/pages/MainPage"
+
 
 function App() {
+  const [navigateToPage, setNavigateToPage] = useState("land");
+
+  const nav = (page) => {
+    console.log(page)
+    setNavigateToPage(page);
+  }
   return (
     <div>
-      <Navigation />
-      <Hero />
-      <JumboTron />
-      <Assylum />
+      {navigateToPage === "land" ? <LandingPage nav={nav}/> :
+      <MainPage nav={nav} />}
     </div>
   )
 }
