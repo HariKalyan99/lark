@@ -36,7 +36,10 @@
 
 import express from 'express';
 import dotenv from 'dotenv';
+import connectToMongo from './DB /connectToMongo.js';
+import authRouter from './routes/auth.routes.js';
 dotenv.config();
+
 
 const app = express();
 let PORT = 5000 || process.env.PORT;
@@ -44,5 +47,6 @@ let PORT = 5000 || process.env.PORT;
 app.use("/api/auth/", authRouter);
 
 app.listen(PORT, () => {
-    console.log(`Listening on the port ${PORT}`)
+    console.log(`Listening on the port ${PORT}`);
+    connectToMongo();
 })
