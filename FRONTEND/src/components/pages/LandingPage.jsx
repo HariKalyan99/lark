@@ -15,4 +15,4 @@ const LandingPage = ({nav}) => {
   )
 }
 
-export default LandingPage
+export default LandingPage;

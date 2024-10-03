@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "../../public/lark_logo.png";
 
-const LoginPage = ({displayFn}) => {
+const LoginPage = ({displayFn, nav}) => {
     return (
         <div
             className="d-flex justify-content-center flex-column align-items-center"
@@ -48,6 +48,12 @@ const LoginPage = ({displayFn}) => {
                         Register
                     </a>
                 </p>
+                <p className="text-white" >
+          Go to dashboard{" "}
+          <a href="#" className="text-info fw-bold" onClick={() => nav("land")}>
+            click here
+          </a>
+        </p>
             </form>
         </div>
     )
