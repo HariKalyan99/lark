@@ -15,7 +15,7 @@ const JumboTron = ({nav, noBg}) => {
         <div className='container'>
         <div className="row py-lg-5">
           <div className="col-lg-6 col-md-12 py-5">
-            <div className='logo_lark' onClick={() => nav("land")}>
+            <div className='logo_lark' onClick={() => nav("auth")}>
               <img src={clogo} alt="logo-img" className='logo_lark_img'/>
             </div>
             {/* <p>
@@ -24,7 +24,7 @@ const JumboTron = ({nav, noBg}) => {
           </p> */}
           </div>
           <div className="col-lg-6 col-md-12 py-5">
-            <div className='logo_lark' onClick={() => nav("land")}>
+            <div className='logo_lark' onClick={() => nav("auth")}>
               <img src={ulogo} alt="logo-img" className='logo_lark_img'/>
             </div>
             {/* <p>
@@ -32,6 +32,7 @@ const JumboTron = ({nav, noBg}) => {
             <a href="#" className="btn btn-secondary my-2">Secondary action</a>
           </p> */}
         </div>
+        <h1 className='text-white fs-1'>Are you new here! <a href="">Register</a></h1>
         </div>
         </div>
           
@@ -65,4 +66,4 @@ const JumboTron = ({nav, noBg}) => {
   }
 }
 
-export default JumboTron
+export default JumboTron;
