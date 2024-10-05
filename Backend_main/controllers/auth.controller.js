@@ -39,7 +39,7 @@ export const postSignup = async (request, response) => {
       email,
       fullname,
     });
-
+    
     if (newUser) {
       await newUser.save();
 
@@ -61,15 +61,17 @@ export const postSignup = async (request, response) => {
 export const postLogin = async (request, response) => {
     try {
       const { username, password } = request.body;
-console.log(username, password)
 
       const userExists = await Auth.findOne({ username });
+      if(password.length < 6){
+        return response.status(400).json({error: "Password must be atleast 6 characters long"})
+      }
   
-      const isPasswordVerified = bcrypt.compare(password, userExists.password);
+      const isPasswordVerified = await bcrypt.compare(password, userExists.password);
 
 
       if(!isPasswordVerified){
-        return response.status(400).status({error: "Invalid username and password"})
+        return response.status(400).json({error: "Invalid username and password"})
       }
   
       if (userExists && isPasswordVerified) {

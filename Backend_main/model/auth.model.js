@@ -5,7 +5,7 @@ const authSchema = new  mongoose.Schema({
     username: {type: String, maxLength: 50, unique: true, required: true},
     fullname: {type: String, maxLength: 50, unique: true,},
     password: {type: String, unique: true, required: true},
-    email: {type: String, unique: true, required: true, validate: (mail) => validator.isEmail(mail)}
+    email: {type: String, unique: true, required: true, validate: (email) => validator.isEmail(email)}
 }, {timestamps: true})
 
 

@@ -18,10 +18,10 @@ const SignupPage = ({displayFn, nav, postSignupFn}) => {
 
     postSignupFn({username, fullname, password, email});
 
-    usernameRef.current.value = "";
-    passwordRef.current.value = "";
-    fullnameRef.current.value = "";
-    emailRef.current.value = "";
+    // usernameRef.current.value = "";
+    // passwordRef.current.value = "";
+    // fullnameRef.current.value = "";
+    // emailRef.current.value = "";
 
 
   }
@@ -86,7 +86,7 @@ const SignupPage = ({displayFn, nav, postSignupFn}) => {
             border: "none",
           }}
 
-          ref={passwordRef}
+          ref={emailRef}
         />
 
         <label id="password" className="fs-3 fw-bold">
@@ -103,7 +103,7 @@ const SignupPage = ({displayFn, nav, postSignupFn}) => {
             border: "none",
           }}
 
-          ref={emailRef}
+          ref={passwordRef}
         />
 
         

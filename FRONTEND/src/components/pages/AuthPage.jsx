@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import SignupPage from '../SignupPage'
-import LoginPage from '../LoginPage'
-import axios from 'axios';
+import SignupPage from '../SignupPage';
+import LoginPage from '../LoginPage';
+import toast from 'react-hot-toast';
 
 const AuthPage = ({nav}) => {
     const [displayAuth, setDisplayAuth] = useState("signup");
@@ -22,9 +22,17 @@ const AuthPage = ({nav}) => {
 
           })
           const data = res.json();
-          data.then(res => console.log(res));
+          data.then(res => {
+            if(res?.username){
+              toast.success("Account created successfully")
+            }else if(res.error){
+              toast.error(res.error)
+            }
+          });
+          
         } catch (error) {
           console.log("Error in the authPage useEffect")
+          toast.error(error)
         }
       }
 
@@ -36,7 +44,7 @@ const AuthPage = ({nav}) => {
 
     useEffect(() => {
       const postLogin = async(user) => {
-        console.log(user)
+        
         try {
           const res = await fetch("/api/auth/login", {
             method: "POST",  
@@ -46,9 +54,16 @@ const AuthPage = ({nav}) => {
 
           })
           const data = res.json();
-          data.then(res => console.log(res));
+          data.then(res => {
+            if(res?.username){
+              toast.success("Logged in successfully")
+            }else if(res.error){
+              toast.error(res.error)
+            }
+          });
         } catch (error) {
-          console.log("Error in the authPage useEffect")
+          console.log("Error in the authPage useEffect");
+          toast.error(error);
         }
       }
 
@@ -59,7 +74,8 @@ const AuthPage = ({nav}) => {
     }, [authUserLogin])
 
     const postSignupFn = (data) => {
-      setAuthUser(data)
+      setAuthUser(data);
+      // console.log(data);
     }
 
     const postLoginFn = (data) => {
