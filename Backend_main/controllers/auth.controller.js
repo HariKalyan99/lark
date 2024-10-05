@@ -5,7 +5,6 @@ import generateTokenAndCookies from "../utils/setTokenAndCookies.js";
 export const postSignup = async (request, response) => {
   try {
     const { username, password, fullname, email } = request.body;
-
     const userExists = await Auth.findOne({ username });
 
     if (userExists) {
@@ -62,6 +61,8 @@ export const postSignup = async (request, response) => {
 export const postLogin = async (request, response) => {
     try {
       const { username, password } = request.body;
+console.log(username, password)
+
       const userExists = await Auth.findOne({ username });
   
       const isPasswordVerified = bcrypt.compare(password, userExists.password);
@@ -84,7 +85,6 @@ export const postLogin = async (request, response) => {
      
     } catch (error) {
       console.log("Error in the postLogin controllers", error);
-
       return response.status(500).json({ error: "Internal server error" });
     }
   };

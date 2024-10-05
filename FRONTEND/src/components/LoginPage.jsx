@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import logo from "../../public/lark_logo.png";
 
-const LoginPage = ({displayFn, nav}) => {
+const LoginPage = ({displayFn, nav, postLoginFn}) => {
+    const usernameRef = useRef("");
+    const passwordRef = useRef("");
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const username = usernameRef.current.value;
+        const password = passwordRef.current.value;
+        postLoginFn({username, password})
+
+    }
+    
     return (
         <div
             className="d-flex justify-content-center flex-column align-items-center"
@@ -12,6 +22,7 @@ const LoginPage = ({displayFn, nav}) => {
             <form
                 className="d-flex flex-column gap-2 p-5"
                 style={{ boxShadow: "1px 1px 19px 10px white", borderRadius: "10px" }}
+                onSubmit={(e) => handleSubmit(e)}
             >
                 <label id="username" className="fs-3 fw-bold">
                     Username
@@ -26,6 +37,7 @@ const LoginPage = ({displayFn, nav}) => {
                         borderRadius: "20px",
                         border: "none",
                     }}
+                    ref={usernameRef}
                 />
                 <label id="password" className="fs-3 fw-bold">
                     Password
@@ -40,8 +52,9 @@ const LoginPage = ({displayFn, nav}) => {
                         borderRadius: "20px",
                         border: "none",
                     }}
+                    ref={passwordRef}
                 />
-
+                <button type='submit' className='btn btn-dark'>Login</button>
                 <p className="text-white" >
                     Don't have an account?{" "}
                     <a href='#signup' className="text-info fw-bold" onClick={() => displayFn("login")}>
