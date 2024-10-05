@@ -8,7 +8,10 @@ const LoginPage = ({displayFn, nav, postLoginFn}) => {
         e.preventDefault();
         const username = usernameRef.current.value;
         const password = passwordRef.current.value;
-        postLoginFn({username, password})
+        postLoginFn({username, password});
+        usernameRef.current.value = ""
+        passwordRef.current.value = ""
+
 
     }
     

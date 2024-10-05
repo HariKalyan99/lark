@@ -18,6 +18,12 @@ const SignupPage = ({displayFn, nav, postSignupFn}) => {
 
     postSignupFn({username, fullname, password, email});
 
+    usernameRef.current.value = "";
+    passwordRef.current.value = "";
+    fullnameRef.current.value = "";
+    emailRef.current.value = "";
+
+
   }
   return (
     <div
