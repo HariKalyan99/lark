@@ -33,7 +33,7 @@ const SignupPage = ({displayFn, nav, postSignupFn}) => {
       <img src={logo} alt="logo_lark" height={100} />
       <h1 className="fs-1 fw-bolder my-3">SIGNUP</h1>
       <form
-        className="d-flex flex-column gap-2 p-5"
+        className="d-flex flex-column gap-2 p-5 justify-content-center align-items-center"
         style={{ boxShadow: "1px 1px 19px 10px white", borderRadius: "10px" }}
         onSubmit={(e) => handleSubmit(e)}
       >
@@ -107,7 +107,7 @@ const SignupPage = ({displayFn, nav, postSignupFn}) => {
         />
 
         
-        <button type="submit" className="btn btn-dark">Submit</button>
+        <button type="submit" className="formSubmitBtn">Submit</button>
 
 
 

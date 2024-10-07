@@ -25,6 +25,24 @@ html, body {
 }
 
 
+.formSubmitBtn {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000000;
+  color: var(--primary-white-color);
+  margin: 15px 0 10px 0;
+}
+
+
+
+.formSubmitBtn:hover {
+
+  background-color: var(--primary-white-color);
+  color: var(--primary-black-color);
+}
+
 @media (min-width: 200px) and (max-width: 540px) {
   .logo_lark {
     min-width: 200px;
